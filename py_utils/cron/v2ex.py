@@ -9,28 +9,23 @@ class V2ex:
     base_url = 'http://www.v2ex.com'
 
     def __init__(self, cookie,
-                 agent='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0'):
+                 agent='Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36'):
         session = requests.session()
-        headers = {
-            'User-Agent': agent,
-            'Cookie': cookie
-        }
-        session.headers = headers
-        self.session = session
+        session.headers['user-agent'] = agent
+        session.headers['cookie'] = cookie
+        self._session = session
 
     def task(self):
         mission_url = self._get_mission_url()
-        print mission_url
-        # self._start_mission(mission_url)
+        self._start_mission(mission_url)
         print 'task complete'
 
     def _start_mission(self, mission_url):
-        self.session.headers['referer'] = self.base_url + '/mission/daily'
-        r = self.session.get(mission_url)
-        print r.text
+        self._session.headers['referer'] = self.base_url + '/mission/daily'
+        self._session.get(mission_url)
 
     def _get_mission_url(self):
-        r = self.session.get(self.base_url + '/mission/daily')
+        r = self._session.get(self.base_url + '/mission/daily')
         box_pattern = r'/mission/daily/redeem\?once=\d+'
         matches = re.search(box_pattern, r.text)
         return self.base_url + matches.group(0) if None != matches else ''
