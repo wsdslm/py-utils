@@ -21,9 +21,9 @@
 	vi cron/cron.cfg
 	crontab -e
 	5 */5 * * * python ~/py-utils/cron/feiyue.py
-	* * */1 * * python ~/py-utils/cron/lk.py
-	* * */1 * * python ~/py-utils/cron/djgame.py
-	* * */1 * * python ~/py-utils/cron/v2ex.py
+	5 0 * * * python ~/py-utils/cron/lk.py
+	5 0 * * * python ~/py-utils/cron/djgame.py
+	5 0 * * * python ~/py-utils/cron/v2ex.py
 
 ## 采集 ##
 Windows下配合IDM使用
