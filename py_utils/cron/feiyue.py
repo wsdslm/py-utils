@@ -6,7 +6,7 @@ import re
 
 
 class Feiyue:
-    base_url = 'http://2dgal.com'
+    base_url = 'http://ddgal.com'
 
     def __init__(self, username, password,
                  agent='Mozilla/5.0 (Windows NT 6.1; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0'):

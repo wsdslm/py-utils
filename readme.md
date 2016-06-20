@@ -1,7 +1,7 @@
 # readme #
 日常任务和采集工具
 
-- [绯月Galgame](http://2dgal.com/)
+- [绯月Galgame](http://ddgal.com/)
 - [轻之国度](http://www.lightnovel.cn/forum.php)
 - [2DJGAME!](http://bbs4.2djgame.net/home/forum.php)
 - [V2EX](https://www.v2ex.com/)
