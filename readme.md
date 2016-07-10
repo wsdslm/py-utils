@@ -1,10 +1,11 @@
 # readme #
 日常任务和采集工具
 
-- [绯月Galgame](http://ddgal.com/)
+- [绯月Galgame](http://2dkf.com/)
 - [轻之国度](http://www.lightnovel.cn/forum.php)
 - [2DJGAME!](http://bbs4.2djgame.net/home/forum.php)
 - [V2EX](https://www.v2ex.com/)
+- [天使动漫论坛](http://www.tsdm.net/forum.php)
 
 ## 使用 ##
 获取代码
@@ -24,6 +25,7 @@
 	5 0 * * * python ~/py-utils/cron/lk.py
 	5 0 * * * python ~/py-utils/cron/djgame.py
 	5 0 * * * python ~/py-utils/cron/v2ex.py
+	5 0 * * * python ~/py-utils/cron/tsdm.py
 
 ## 采集 ##
 Windows下配合IDM使用
